@@ -1,0 +1,38 @@
+"I'll explain these since they might be a bit confusing i know
+
+  so DatabaseManager allows to get all the borrows available in the data base and to get to treat them one by one
+
+  DataParser has the following methods :
+  parseBorrows creates a set of borrows, it treats the borrows one by one that we managed to get from the method getBorrows in DatabaseManager class, then creastes instances of borrows
+  it also creates instances of user and of books (the getBook method requires the mmethod getAuthorFromBook, it takes the isbn of a book and creates instances of books and authors (you need to create 
+  an instance of author to construct an instance of books yeah :/ )
+
+  getBook(isbn) : as I sait, creates an instance of a book based on the data available in the database
+  getAuthorFromBook(isbn) : I hate repeating myself :3
+
+  getUser(Id) : guess :3
+
+  DatabaseUpdater contains methods that :
+  - Allow to update a book in the Table book to the values contained in an instance of the book class, it searches the book that matches the ISBN of the one given in input and set the data
+  - Allow to update a borrow in the Table borrows to the values contained in an instance of the borrow, I highly invite you to set the primary key of borrows to (user_ID, book_ISBN and DateOfOperation)
+  then this function needs to be updated conviniently PLEAAAASE
+  - Allow to update a user... Same thing wlhh
+
+  What does this mean, well to regularly update the borrows to be up to date to what is late, we can get all the data, treat every element, create instances of classes, update the classes as implemented in
+  the class files, then insert the update inside the database
+
+  but then why create them also for books? Well because eveytime there is a borrow or a return, we also have to update the data inside the database. I also think it would be a great idea to update
+  the book class by putting only Author in the attributes instead of Set<Authors>, it will only make things harder, I also think that the Table Author is pointless, as well as the class email that I'd
+  love to change to a simple string (with obviously checks that someone inserts a valid email FORMAT in that value)
+
+  I have to make specific constructors for creating instances from data retrieved from database
+
+  PLEASE NOTE THAT FURTHER CHANGES WILL BE MADE, AND THAT WE'LL HAVE TO MAKE ALL THE CODE COMPATIBLE WITH IT, THAT DOESNT MEAN YOU SHOULD IGNORE THE CHANGES HERE UNTIL FURTHER NOTICE, AND DO NOT BE SHY YOU
+  CAN ALSO MAKE CHANGES TO THE CLASSES I FULLY TRUST YOUR SKILLS TO UPDATE THE FILES BASED ON YOUR NEEDS 
+  ALSO THE FUNCTIONS THAT INSERT DATA INSIDE OF THE DATABASE ARE NOT SET UP, PLEASE DO NOT FORGET TO MIND THOSE.
+  THANK YOU FOR YOUR UNDERSTANDING, I HOPE THESE RECENT UPLOADS HELP TOWARDS A SMOOTHER AND MORE EFFICIENT ADVANCEMENT IN THE PROJECT.
+
+  YOURS FAITHFULLY, 
+  ZyadNotCodingWell
+
+  PS: I WILL HAVE TO TAKE A DAY OF REST I HAVE BEEN LITERALLY SLEEP DEPRIVED FOR THE COUPLE LAST DAYS

@@ -1,0 +1,9 @@
+// Set a timer that triggers once at midnight (This is the hardest part I suppose)
+// Once triggered, set a loop on all elements of the table borrows
+//     Create instances of Borrows base on the data of the table row ( I need to put a specific constructor for that that takes in OpDate and OpReturnDate in input)
+//     Apply the StatusUpdate Method already implemented on the borrow class, it's a void method that updates the status of a borrow (it's quite optimised dw)
+//     Update the row in the table that corresponds to the updated borrow 
+// Voilà ! 
+// now the thing is, this code has to run each time the local time reaches midnight, this is the part I'm stuck on
+// Or not necessarily, hear me out: the librarian logs in every morning and logs out every night. All operations are done during this timelapse, by setting the trigger to start the update after each successful
+// login, that data accessed during the session is up to date as wanted
